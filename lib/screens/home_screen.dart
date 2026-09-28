@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../data/movies_data.dart';
 import '../models/movie.dart';
+import 'details_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -34,8 +35,14 @@ class MovieCard extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 12),
       clipBehavior: Clip.antiAlias,
       child: InkWell(
-        // Navigation to DetailsScreen is added in a later step.
-        onTap: () {},
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (_) => DetailsScreen(movie: movie),
+            ),
+          );
+        },
         child: Row(
           children: [
             Image.asset(
