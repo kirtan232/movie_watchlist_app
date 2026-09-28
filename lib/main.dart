@@ -20,6 +20,7 @@ class MovieWatchlistApp extends StatelessWidget {
           brightness: Brightness.dark,
         ),
         useMaterial3: true,
+        appBarTheme: const AppBarTheme(centerTitle: true),
       ),
       home: const HomeScreen(),
     );

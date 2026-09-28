@@ -20,12 +20,15 @@ class DetailsScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Center(
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(12),
-                child: Image.asset(
-                  movie.posterPath,
-                  height: 360,
-                  fit: BoxFit.cover,
+              child: Hero(
+                tag: movie.posterPath,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Image.asset(
+                    movie.posterPath,
+                    height: 360,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),

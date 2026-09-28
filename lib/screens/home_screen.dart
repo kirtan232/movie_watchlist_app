@@ -45,11 +45,14 @@ class MovieCard extends StatelessWidget {
         },
         child: Row(
           children: [
-            Image.asset(
-              movie.posterPath,
-              width: 90,
-              height: 135,
-              fit: BoxFit.cover,
+            Hero(
+              tag: movie.posterPath,
+              child: Image.asset(
+                movie.posterPath,
+                width: 90,
+                height: 135,
+                fit: BoxFit.cover,
+              ),
             ),
             Expanded(
               child: Padding(
@@ -65,6 +68,15 @@ class MovieCard extends StatelessWidget {
                     const SizedBox(height: 4),
                     Text('${movie.year}  •  ${movie.genre}',
                         style: textTheme.bodySmall),
+                    const SizedBox(height: 8),
+                    Text(
+                      movie.cast.take(2).join(', '),
+                      style: textTheme.bodySmall?.copyWith(
+                        color: Theme.of(context).colorScheme.onSurfaceVariant,
+                      ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
                   ],
                 ),
               ),

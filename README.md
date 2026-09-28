@@ -1,17 +1,52 @@
-# movie_watchlist_app
+# Movie Watchlist App
 
-A new Flutter project.
+A multi-screen Flutter app built for **CW-02 (CSC 4360 — Mobile App Development)**.
+It shows a list of movies, and tapping a movie opens a details screen with its
+poster, cast and synopsis.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- **HomeScreen** — scrollable list of movies built with `ListView.builder`,
+  showing each movie's poster, title, year, genre and top cast.
+- **DetailsScreen** — shows the selected movie's poster, title, year, genre,
+  full cast and synopsis.
+- **Navigation + data passing** — `Navigator.push` with `MaterialPageRoute`
+  passes the whole `Movie` object to the DetailsScreen.
+- **Image assets** — poster images stored in `assets/images/` and loaded with
+  `Image.asset()`.
+- **Hero animation** — the poster animates from the list into the details screen.
 
-A few resources to get you started if this is your first Flutter project:
+## Movies
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Spider-Man: Brand New Day · The Odyssey · Resident Evil · Shrek 2 · Big Hero 6
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Project Structure
+
+```
+lib/
+├── main.dart                  # App entry point and theme
+├── models/
+│   └── movie.dart             # Movie model class
+├── data/
+│   └── movies_data.dart       # Static list of movies
+└── screens/
+    ├── home_screen.dart       # Movie list
+    └── details_screen.dart    # Movie details
+assets/
+└── images/                    # Movie posters
+```
+
+## Running the App
+
+```bash
+flutter pub get
+flutter run
+```
+
+## Building the APK
+
+```bash
+flutter build apk --release
+```
+
+The APK is created at `build/app/outputs/flutter-apk/app-release.apk`.
