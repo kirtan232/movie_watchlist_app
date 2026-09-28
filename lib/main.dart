@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'screens/home_screen.dart';
+
 void main() {
   runApp(const MovieWatchlistApp());
 }
@@ -19,11 +21,7 @@ class MovieWatchlistApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      // Temporary placeholder until HomeScreen is built in a later step.
-      home: Scaffold(
-        appBar: AppBar(title: const Text('Movie Watchlist')),
-        body: const Center(child: Text('Movies coming soon...')),
-      ),
+      home: const HomeScreen(),
     );
   }
 }

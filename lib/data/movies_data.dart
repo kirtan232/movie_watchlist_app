@@ -3,7 +3,7 @@ import '../models/movie.dart';
 const List<Movie> sampleMovies = [
   Movie(
     title: 'Spider-Man: Brand New Day',
-    posterPath: 'assets/images/spider_man_brand_new_day.png',
+    posterPath: 'assets/images/spider_man_brand_new_day.jpg',
     year: 2026,
     genre: 'Action / Superhero',
     cast: ['Tom Holland', 'Zendaya', 'Sadie Sink', 'Mark Ruffalo', 'Jon Bernthal'],
@@ -14,7 +14,7 @@ const List<Movie> sampleMovies = [
   ),
   Movie(
     title: 'The Odyssey',
-    posterPath: 'assets/images/the_odyssey.png',
+    posterPath: 'assets/images/the_odyssey.jpg',
     year: 2026,
     genre: 'Epic / Adventure',
     cast: ['Matt Damon', 'Tom Holland', 'Anne Hathaway', 'Zendaya', 'Robert Pattinson'],
@@ -35,7 +35,7 @@ const List<Movie> sampleMovies = [
   ),
   Movie(
     title: 'Shrek 2',
-    posterPath: 'assets/images/shrek_2.png',
+    posterPath: 'assets/images/shrek_2.jpg',
     year: 2004,
     genre: 'Animation / Comedy',
     cast: ['Mike Myers', 'Eddie Murphy', 'Cameron Diaz', 'Antonio Banderas'],
@@ -45,7 +45,7 @@ const List<Movie> sampleMovies = [
   ),
   Movie(
     title: 'Big Hero 6',
-    posterPath: 'assets/images/big_hero_6.png',
+    posterPath: 'assets/images/big_hero_6.jpg',
     year: 2014,
     genre: 'Animation / Action',
     cast: ['Ryan Potter', 'Scott Adsit', 'Jamie Chung', 'T.J. Miller', 'Damon Wayans Jr.'],
